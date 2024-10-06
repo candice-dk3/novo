@@ -1,10 +1,10 @@
 <template>
   <nav>
     <div class="left-side">
-        <router-link to="/products">SHOP</router-link>
+        <router-link to="/"><img :src="logo" alt="Novo Logo" class="logo"></router-link>
     </div>
     <div class="middle">
-        <router-link to="/"><img :src="logo" alt="Novo Logo" class="logo"></router-link>
+        <router-link to="/products">SHOP</router-link>
     </div>
     <div class="right-side">
         <router-link to="/cart">Cart</router-link>
@@ -24,11 +24,11 @@ export default {
 </script>
 <style scoped>   
 nav {
-  padding: 1rem;
+  padding: 0rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   background-color: #0C264E;
-  height: 2.2rem;
+  height: 5rem;
 }
 
 nav a {
@@ -43,6 +43,6 @@ nav a.router-link-exact-active {
     color: #42b983;
 }
 .logo{
-    height: 8rem;
+    height: 6rem;
 }
 </style>
