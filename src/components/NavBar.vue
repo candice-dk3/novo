@@ -7,8 +7,10 @@
         <router-link to="/products">SHOP</router-link>
     </div>
     <div class="right-side">
-        <router-link to="/cart">Cart</router-link>
-        <router-link to="/account">Account</router-link>
+        <router-link to="/cart"><img :src="cartLogo" alt="Cart Logo" class="cartLogo"></router-link>
+        <router-link to="/login">Log In</router-link>
+        <router-link to="/signUp">Sign Up</router-link>
+        <router-link to="/account"><img :src="accLogo" alt="Account Logo" class="accLogo"></router-link>
     </div>
   </nav>
 </template>
@@ -24,7 +26,7 @@ export default {
 </script>
 <style scoped>   
 nav {
-  padding: 0rem;
+  padding: 0.2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   background-color: #0C264E;
@@ -35,14 +37,24 @@ nav a {
     padding: 1rem;
     color: black;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 1.4rem;
 }
 
 nav a.router-link-exact-active {
-    color: #42b983;
+    color: #CBB26A;
 }
 .logo{
-    height: 6rem;
+    height: 4rem;
+    margin-top: 0.4rem;
+    margin-right: 15rem;
+}
+.right-side{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.middle{
+    /* padding: 1rem; */
+    margin-top: 1.4rem;
 }
 </style>
