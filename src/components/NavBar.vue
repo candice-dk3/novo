@@ -4,7 +4,7 @@
         <router-link to="/products">SHOP</router-link>
     </div>
     <div class="middle">
-        <router-link to="/">Novo Logo</router-link>
+        <router-link to="/"><img :src="logo" alt="Novo Logo" class="logo"></router-link>
     </div>
     <div class="right-side">
         <router-link to="/cart">Cart</router-link>
@@ -14,7 +14,12 @@
 </template>
 <script>
 export default {
-    name:'Navbar'
+    name:'Navbar',
+    data(){
+        return{
+            logo:'https://github.com/candice-dk3/novo/blob/frontend/src/assets/novo-logo.png?raw=true'
+        }
+    }
 }
 </script>
 <style scoped>   
@@ -36,5 +41,8 @@ nav a {
 
 nav a.router-link-exact-active {
     color: #42b983;
+}
+.logo{
+    height: 8rem;
 }
 </style>
