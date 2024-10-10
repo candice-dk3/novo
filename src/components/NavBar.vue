@@ -6,6 +6,7 @@
     <div class="middle">
         <router-link to="/">Home</router-link>
         <router-link to="/products">Shop</router-link>
+        <router-link to="/service">Services</router-link>
         <router-link to="/about">About</router-link>
     </div>
     <div class="right-side">
@@ -95,7 +96,7 @@ nav a.router-link-exact-active {
 }
 .middle{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 .Logo{
     width: 2.5rem;
