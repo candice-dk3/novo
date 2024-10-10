@@ -4,13 +4,19 @@
         <router-link to="/"><img :src="logo" alt="Novo Logo" class="logo"></router-link>
     </div>
     <div class="middle">
+        <router-link to="/">Home</router-link>
         <router-link to="/products">Shop</router-link>
+        <router-link to="/about">About</router-link>
     </div>
     <div class="right-side">
+      <div class="log-sign-sec">
         <router-link to="/login">Log In</router-link>
         <router-link to="/signUp">Sign Up</router-link>
+      </div>
+      <div class="acc-sec">
         <router-link to="/cart"><img :src="cartLogo" alt="Cart Logo" class="Logo"></router-link>
         <router-link to="/account"><img :src="accLogo" alt="Account Logo" class="Logo"></router-link>
+      </div>
     </div>
     <div class="hamburger" @click="toggleMenu">
         <div class="line"></div>
@@ -73,11 +79,23 @@ nav a.router-link-exact-active {
     margin-right: 15rem;
 }
 .right-side{
+     margin-top: 1.4rem;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+.log-sign-sec a, .acc-sec a {
+  margin-right: 2rem;
+}
+.acc-sec {
+ text-align: right;
+}
+.log-sign-sec {
+  text-align: right;
+  margin-right: -8rem;
 }
 .middle{
-    margin-top: 1.4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 .Logo{
     width: 2.5rem;

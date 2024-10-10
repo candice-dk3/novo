@@ -101,6 +101,10 @@ h3{
     color: white;
     font-weight: 400;
 }
+.copyRight{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
 @media screen and (max-width: 390px) {
 footer{
     height: auto;
@@ -111,6 +115,10 @@ footer{
 }   
 }
 @media screen and (max-width:768px) and (min-width: 391px) {
+.content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+}
 .couchLogo{
     width: 14rem;
     margin-top: 3.2rem;
