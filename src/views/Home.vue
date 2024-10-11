@@ -1,15 +1,19 @@
 <template>
 <section class="inner-sec">
     <div class="first-sec">
-        <div class="SP">
-            <div class="image">
-                <img :src="first" alt="Home Picture" class="first-image">
-            </div>
-            <div class="text">
-                <h1>
-                    Find a piece <br> to make <br> your house <br> feel like a <br> HOME.
-                </h1>
-                <router-link to="/products" class="btn">Explore more</router-link>
+        <div class="container">
+            <div class="SP">
+                <div class="image">
+                    <img :src="first" alt="Home Picture" class="first-image">
+                </div>
+                <div class="text">
+                    <h1>
+                        Find a piece <br> to make <br> your house <br> feel like a <br> HOME.
+                    </h1>
+                    <button>
+                        <router-link to="/products" class="btn">Explore more</router-link>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -59,35 +63,52 @@ export default {
     color: white;
 }
 /* First Section */
-.first-sec{
-    padding: 1rem;
-    height: 51.6rem;
+.first-sec {
+  position: relative;
+  padding: 0rem;
+  height: 50rem;
 }
-.first-image{
-    width: 40rem;
-    height: 35rem;
-    padding: 5rem;
+.first-image {
+  width: 100%;
+  height: 50rem;
+  padding: 0;
+  object-fit: cover;
 }
-.SP{
+/* .SP{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-}
-.text{
-    padding: 4rem;
-    text-align: left;
-    margin-left: 12rem;
+} */
+.text {
+  position: absolute;
+  top: 50%; 
+  left: 20%; 
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: black; 
+  font-size: 5rem;
+  font-weight: 200;
+  margin: 0; 
+  text-align: left
 }
 .text h1{
     font-size: 5rem;
     margin-bottom: 1rem;
-    font-weight: 200;
+    font-weight: 500;
 }
 .text a{
     text-decoration: none;
-    color: white; 
+    /* color: white; */
+    font-size: 1.3rem;
+    color: white;
+    padding: 0.4rem;
+}
+button{
+    border: none;
+    background-color: #0C264E;
+    height: 2.4rem;
 }
 .btn{
-    background-color: #0C264E;
+    /* background-color: #0C264E; */
 }
 
 /* Second Section */
@@ -100,7 +121,7 @@ export default {
 }
 .inner-categories h1{
     font-weight: 500;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     margin-bottom: 2rem;
 }
 .categories {
@@ -135,20 +156,17 @@ export default {
   font-size: 1.5rem;
   transform: translateY(100%);
   transition: transform 0.5s ease-in-out;
-  display: flex; /* Add this line */
-  justify-content: center; /* Add this line */
-  align-items: center; /* Add this line */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .category-image:hover .category-text {
   transform: translateY(0);
 }
-    /* End of Second Section */
-
-    /* Third Section */
-    .third-sec{
-        height: 50rem;
-    }
-    /* End of  Third Section */
+/* Third Section */
+.third-sec{
+    height: 50rem;
+}
 
 </style>

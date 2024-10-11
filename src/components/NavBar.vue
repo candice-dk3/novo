@@ -11,8 +11,9 @@
     </div>
     <div class="right-side">
       <div class="log-sign-sec">
-        <router-link to="/login">Log In</router-link>
-        <router-link to="/signUp">Sign Up</router-link>
+        <!-- <button @click="showModal = true">Log In</button> -->
+        <router-link to="/">Log In</router-link>
+        <router-link to="/">Sign Up</router-link>
       </div>
       <div class="acc-sec">
         <router-link to="/cart"><img :src="cartLogo" alt="Cart Logo" class="Logo"></router-link>
@@ -26,10 +27,31 @@
     </div>
     <div class="mobile-menu" :class="{ 'active': mobileMenuActive }">
         <router-link to="/products">SHOP</router-link>
-        <router-link to="/login">LOG IN</router-link>
-        <router-link to="/signUp">SIGN UP</router-link>
+        <router-link to="/">LOG IN</router-link>
+        <router-link to="/">SIGN UP</router-link>
         <router-link to="/cart">CART</router-link>
         <router-link to="/account">ACCOUNT</router-link>
+    </div>
+
+    <!-- Log In modal -->
+    <div class="modal" v-if="showModal">
+      <div class="modal-background" @click="showModal = false"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Log In</h2>
+          <button class="close" @click="showModal = false">&times;</button>
+        </div>
+        <div class="modal-body">
+          <!-- Log in form goes here -->
+          <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <input type="submit" value="Log In">
+          </form>
+        </div>
+      </div>
     </div>
 </nav>
 </template>
@@ -42,16 +64,25 @@ export default {
             cartLogo: 'https://github.com/candice-dk3/novo/blob/frontend/src/assets/cart.png?raw=true',
             accLogo: 'https://github.com/candice-dk3/novo/blob/frontend/src/assets/account.png?raw=true',
             mobileMenuActive: false,
-            showNavbar: true
+            showNavbar: true,
+            showModal: false,
+            username: '',
+            password: ''
         }
     },
     methods: {
     toggleMenu() {
         this.mobileMenuActive = !this.mobileMenuActive;
-    },
+      },
     hideNavbar() {
       this.showNavbar = false;
-    }
+      },
+    login() {
+      // Call your login API or authentication logic here
+      // For demonstration purposes, we'll just log a success message
+      console.log('Login successful!');
+      this.showModal = false;
+      }
     }
 }
 </script>
@@ -130,6 +161,61 @@ nav a.router-link-exact-active {
 }
 .mobile-menu.active {
     display: block;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000; 
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: relative;
+  background-color: #f9f9f9;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+.close {
+  cursor: pointer;
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.modal-body {
+  padding: 20px;
 }
 @media screen and (max-width: 390px) {
 nav {
