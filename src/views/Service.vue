@@ -1,7 +1,7 @@
 <template scoped>
-    <div>
-        
-    </div>
+    <section>
+        <div></div>
+    </section>
 </template>
 <script>
 export default {
