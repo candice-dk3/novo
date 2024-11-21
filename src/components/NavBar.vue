@@ -76,12 +76,6 @@ export default {
       },
     hideNavbar() {
       this.showNavbar = false;
-      },
-    login() {
-      // Call your login API or authentication logic here
-      // For demonstration purposes, we'll just log a success message
-      console.log('Login successful!');
-      this.showModal = false;
       }
     }
 }

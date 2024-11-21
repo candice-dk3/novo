@@ -107,9 +107,6 @@ button{
     background-color: #0C264E;
     height: 2.4rem;
 }
-.btn{
-    /* background-color: #0C264E; */
-}
 
 /* Second Section */
 .second-sec{
