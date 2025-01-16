@@ -64,12 +64,12 @@ export default {
 /* First Section */
 .first-sec {
   position: relative;
-  padding: 0rem;
-  height: 50rem;
+  padding: 0px;
+  height: 850px;
 }
 .first-image {
   width: 100%;
-  height: 50rem;
+  height: 850px;
   padding: 0;
   object-fit: cover;
 }
@@ -104,13 +104,14 @@ export default {
 button{
     border: none;
     background-color: #0C264E;
-    height: 2.4rem;
+    height: 60px;
+    width: 226px;
 }
 
 /* Second Section */
 .second-sec{
-    height: 60rem;
-    background-color: #0C264E;
+    background-image: url('https://github.com/candice-dk3/novo/blob/frontend/src/assets/category-bg.png?raw=true');
+    background-repeat: no-repeat;
 }
 .inner-categories{
     padding: 4rem;
