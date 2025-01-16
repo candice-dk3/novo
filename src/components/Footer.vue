@@ -105,7 +105,7 @@ h3{
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 490px) {
 footer{
     height: auto;
     padding: 1rem;
@@ -114,7 +114,7 @@ footer{
     grid-template-columns: repeat(1, 1fr); 
 }   
 }
-@media screen and (max-width:768px) and (min-width: 391px) {
+@media screen and (max-width: 1200px) and (min-width: 491px) {
 .content{
     display: grid;
     grid-template-columns: repeat(2, 1fr); 

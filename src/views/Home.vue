@@ -19,7 +19,6 @@
     </div>
     <div class="second-sec">
         <div class="inner-categories">
-            <h1>Categories</h1>
             <div class="container">
                 <div class="categories">
                 <div v-for="category in categories" :key="category.id" class="category">

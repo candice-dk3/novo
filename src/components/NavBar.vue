@@ -86,38 +86,42 @@ nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     background-color: #0C264E;
-    height: 5rem;
+    height: 134px;
     position: relative;
 }
 nav a {
     color: white;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 1.4rem;
-    margin-top: 1.4rem;
+    font-weight: 350;
+    font-size: 26px;
+    margin-top: 50px;
 }
 nav a.router-link-exact-active {
     color: #CBB26A;
 }
+nav a:hover{
+  color: #CBB26A;
+  transition: 0.5s;
+}
 .logo{
-    height: 4rem;
-    margin-top: 0.4rem;
-    margin-right: 15rem;
+    height: 90px;
+    margin-top: 20px;
+    margin-right: 200px;
 }
 .right-side{
-     margin-top: 1.4rem;
+    margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 .log-sign-sec a, .acc-sec a {
-  margin-right: 2rem;
+  margin-right: 60px;
 }
 .acc-sec {
  text-align: right;
 }
 .log-sign-sec {
   text-align: right;
-  margin-right: -8rem;
+  margin-right: -130px;
 }
 .middle{
     display: grid;
@@ -211,7 +215,7 @@ nav a.router-link-exact-active {
 .modal-body {
   padding: 20px;
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 490px) {
 nav {
     grid-template-columns: 1fr;
     height: auto;
@@ -239,7 +243,7 @@ nav a {
     display: none;
 }
 }
-@media screen and (max-width: 768px) and (min-width: 391px) {
+@media screen and (max-width: 1200px) and (min-width: 491px) {
   nav {
     grid-template-columns: 1fr;
     height: auto;
@@ -268,7 +272,7 @@ nav a {
     display: none;
   }
 }
-@media screen and (max-width: 1024px) and (min-width: 769px){
+/* @media screen and (max-width: 1504px) and (min-width: 1201px){
   .left-side, .middle, .right-side {
     grid-column: auto;
     margin-bottom: 0;
@@ -294,5 +298,5 @@ nav a {
   .right-side, .middle {
     display: grid;
   }
-}
+} */
 </style>

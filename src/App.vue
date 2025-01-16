@@ -43,7 +43,7 @@ export default {
   margin: 0;
 }
 #app {
-  font-family: "Gilda Display", serif;
+  font-family: "Kalnia", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
