@@ -60,7 +60,7 @@ export default {
     name:'Navbar',
     data(){
         return{
-            logo:'https://github.com/candice-dk3/novo/blob/frontend/src/assets/novo-logo.png?raw=true',
+            logo:'https://github.com/candice-dk3/novo/blob/frontend/src/assets/navbar-logo.png?raw=true',
             cartLogo: 'https://github.com/candice-dk3/novo/blob/frontend/src/assets/cart.png?raw=true',
             accLogo: 'https://github.com/candice-dk3/novo/blob/frontend/src/assets/account.png?raw=true',
             mobileMenuActive: false,
@@ -104,8 +104,7 @@ nav a:hover{
   transition: 0.5s;
 }
 .logo{
-    height: 90px;
-    margin-top: 20px;
+    height: 134px;
     margin-right: 200px;
 }
 .right-side{

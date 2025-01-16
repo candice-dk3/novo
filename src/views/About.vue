@@ -2,7 +2,10 @@
 <section>
     <div class="text-overlay">
         <h1>About Novo</h1>
-        <h5>Redefining Comfort, One Piece At A Time.</h5>
+        <div class="typewriter">
+            <span>{{ displayedText }}</span>
+            <span class="cursor"></span>
+        </div>
     </div>
     <div class="first-section">
         <div class="content">
@@ -28,18 +31,51 @@
     <div class="last-section">
         <h2>The Minds Behind the Mission: Meet the Team That Brigns Novo to Life</h2>
     </div>
-    <div class="newsletter">
-        <div class="text">
-            <h3>If you want more deals, subscribe to our newsletter</h3>
-        </div>
-        <input type="email" placeholder="example@gmail.com">
-        <button key="enter">Subscribe Now</button>
-    </div>
+
 </section>
 </template>
 <script>
 export default {
-    
+    data() {
+    return {
+      sentences: [
+        "Welcome to Novo, where design meets comfort.",
+        "Your dream space starts with Novo.",
+        "Innovative furniture for every lifestyle.",
+        "Crafted for living, designed to last.",
+        "Redefining Comfort, One Piece At A Time."
+      ],
+      currentSentence: "",
+      displayedText: "",
+      charIndex: 0,
+      typingSpeed: 100 ,
+      pauseTime: 1000, 
+    };
+  },
+  mounted() {
+    this.startTypewriter();
+  },
+  methods: {
+    startTypewriter() {
+      this.pickRandomSentence();
+    },
+    pickRandomSentence() {
+      const randomIndex = Math.floor(Math.random() * this.sentences.length);
+      this.currentSentence = this.sentences[randomIndex];
+      this.displayedText = "";
+      this.charIndex = 0;
+      this.typeSentence();
+    },
+    typeSentence() {
+      if (this.charIndex < this.currentSentence.length) {
+        this.displayedText += this.currentSentence[this.charIndex];
+        this.charIndex++;
+        setTimeout(this.typeSentence, this.typingSpeed); 
+      } else {
+        setTimeout(this.pickRandomSentence, this.pauseTime);
+      }
+    }
+  } 
 }
 </script>
 <style scoped>
@@ -62,6 +98,29 @@ export default {
         font-size: 22px;
         position: relative;
         top: 30%;
+    }
+    .typewriter {
+        color: white;
+        font-weight: 400;
+        font-size: 22px;
+        position: relative;
+        top: 30%;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 80%; 
+        /* margin: 0 auto; */
+        text-align: center;
+    }
+    .cursor {
+        border-right: 20px solid black;
+        display: inline-block;
+        animation: blink 0.5s step-end infinite;
+    }
+    @keyframes blink {
+    50% {
+        border-color: transparent;
+    }
     }
     .first-section{
         display: grid;
@@ -95,17 +154,5 @@ export default {
         text-align: left;
         margin: 0 160px 50px ;
     }
-    .newsletter{
-        height: 211px;
-        color: black;
-        background-image: url('https://github.com/candice-dk3/novo/blob/frontend/src/assets/house2.jpg?raw=true');
-        background-size:cover;
-    }
-    .text h3{
-        background-color: #0c264e7e ;
-        width: 30%;
-        height: 40px;
-        display: contents;
-        justify-content: center;
-    }
+  
 </style>

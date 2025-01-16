@@ -1,0 +1,71 @@
+<template>
+    <section>
+        <div class="newsletter">
+        <div class="text">
+            <h3>If you want more deals, subscribe to our newsletter</h3>
+        </div>
+        <input type="email" name="email" placeholder="example@gmail.com">
+        <button type="submit">Subscribe Now</button>
+    </div>
+    </section>
+</template>
+<script>
+export default {
+    name: 'Newsletter',
+}
+</script>
+<style>
+    .newsletter{
+        height: 280px;
+        color: black;
+        background-image: url('https://github.com/candice-dk3/novo/blob/frontend/src/assets/newsletter.png?raw=true');
+        background-size:cover;
+    }
+    .text h3{
+        background-color: #0c264e7e ;
+        width: 35%;
+        height: 40px;
+        display: inline-block;
+        justify-content: center;
+        margin: 40px 0 20px 0;
+    }
+      .newsletter input{
+        background-color: #CBB26A;
+        border: none;
+        height: 50px;
+        width: 300px;
+        color: white;
+        outline: none;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: "Kalnia", serif;
+    }
+    ::-webkit-input-placeholder {
+    color: white;
+    text-indent: 1rem;
+    font-family: "Kalnia", serif;
+    }
+    input:focus {
+        color: white;
+        text-indent: 1rem;
+        font-family: "Kalnia", serif;
+    }
+    .newsletter button{
+        background-color: #0c264e;
+        border: none;
+        height: 50px;
+        width: 180px;
+        color: white;
+        font-family: "Kalnia", serif;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    .newsletter button:hover{
+        background-color: #0c264e;
+        transition: 0.s;
+        color: #CBB26A;
+        font-weight: 600;
+
+    }
+</style>

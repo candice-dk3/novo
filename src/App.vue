@@ -4,6 +4,7 @@
     <div v-else>
       <NavBar/>
       <router-view/>
+      <Newsletter/>
       <Footer/>
     </div>
   </div>
@@ -13,10 +14,12 @@
 import NavBar from './components/NavBar.vue';
 import Footer from './components/Footer.vue';
 import Spinner from './components/Spinner.vue';
+import Newsletter from './components/Newsletter.vue';
 
 export default {
   components: {
     NavBar,
+    Newsletter,
     Footer,
     Spinner
   },
