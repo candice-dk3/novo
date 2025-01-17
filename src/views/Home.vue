@@ -112,6 +112,7 @@ button{
 .second-sec{
     background-image: url('https://github.com/candice-dk3/novo/blob/frontend/src/assets/category-bg.png?raw=true');
     background-repeat: no-repeat;
+    width: 100%;
 }
 .inner-categories{
     padding: 4rem;

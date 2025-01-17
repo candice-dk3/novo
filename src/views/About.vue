@@ -7,31 +7,32 @@
             <span class="cursor"></span>
         </div>
     </div>
-    <div class="first-section">
-        <div class="content">
-            <h1>Who Are We?</h1>
-            <p>
-                Nulla tempor, eros et aliquam aliquam, turpis elit laoreet mauris, eget tempus arcu tortor ut mi. Sed suscipit nulla neque sodales neque 
-            </p>
-            <p>
-                Nulla tempor, eros et aliquam aliquam, turpis elit laoreet mauris, eget tempus arcu tortor ut mi. Sed suscipit nulla neque sodales neque 
-            </p>
-            <p>
-                Nulla tempor, eros et aliquam aliquam, turpis elit laoreet mauris, eget tempus arcu tortor ut mi. Sed suscipit nulla neque sodales neque 
-            </p>
-            <p>
-                Nulla tempor, eros et aliquam aliquam, turpis elit laoreet mauris, eget tempus arcu tortor ut mi. Sed suscipit nulla neque sodales neque 
-            </p>
+    <div class="box">
+        <div class="first-section">
+            <div class="content">
+                <h1>Who Are We?</h1>
+                <p>
+                    Nulla tempor, eros et aliquam aliquam, turpis elit laoreet mauris, eget tempus arcu tortor ut mi. Sed suscipit nulla neque sodales neque 
+                </p>
+                <p>
+                    Nulla tempor, eros et aliquam aliquam, turpis elit laoreet mauris, eget tempus arcu tortor ut mi. Sed suscipit nulla neque sodales neque 
+                </p>
+                <p>
+                    Nulla tempor, eros et aliquam aliquam, turpis elit laoreet mauris, eget tempus arcu tortor ut mi. Sed suscipit nulla neque sodales neque 
+                </p>
+                <p>
+                    Nulla tempor, eros et aliquam aliquam, turpis elit laoreet mauris, eget tempus arcu tortor ut mi. Sed suscipit nulla neque sodales neque 
+                </p>
+            </div>
+            <div class="images"></div>
         </div>
-        <div class="images"></div>
+        <div class="middle-section">
+            <div class="container"></div>
+        </div>
+        <div class="last-section">
+            <h2>The Minds Behind the Mission: Meet the Team That Brigns Novo to Life</h2>
+        </div>
     </div>
-    <div class="middle-section">
-        <div class="container"></div>
-    </div>
-    <div class="last-section">
-        <h2>The Minds Behind the Mission: Meet the Team That Brigns Novo to Life</h2>
-    </div>
-
 </section>
 </template>
 <script>
@@ -122,6 +123,11 @@ export default {
         border-color: transparent;
     }
     }
+    .box{
+        width: 95%;
+        display: inline-block;
+        /* justify-content: center; */
+    }
     .first-section{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -129,7 +135,7 @@ export default {
         /* margin: 80px 0 0 0 ; */
     }
     .first-section, .content{
-        padding: 0 80px;
+        padding: 0 70px;
     }
     .first-section, .content h1{
         font-weight: 400;
@@ -145,7 +151,7 @@ export default {
     .container{
         height: 291px;
         background-color: #CBB26A;
-        margin: 80px 160px 100px 160px;
+        margin: 80px 140px 100px 140px;
     }
     .last-section h2{
         color: white;
