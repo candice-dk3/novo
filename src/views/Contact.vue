@@ -27,9 +27,14 @@
             </label>
         </div>
         <div class="buttons">
-            <button type="submit">Send Message</button>
-            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/long-arrow-right.png" alt="long-arrow-right"/>
-            <button type="reset">Clear Message</button>
+            <div class="clear">
+                <button type="reset">Clear Message</button>
+                <img class="right" width="35" height="30" src="https://github.com/candice-dk3/novo/blob/frontend/src/assets/icons8-right-arrow-100.png?raw=true" alt="long-arrow-right"/>
+            </div>
+            <div class="submit">
+                <button type="submit">Send Message</button>
+                <img class="right" width="35" height="30" src="https://github.com/candice-dk3/novo/blob/frontend/src/assets/icons8-right-arrow-100.png?raw=true" alt="long-arrow-right"/>
+            </div>
         </div>
     </form>
    </div>
@@ -37,7 +42,7 @@
    <div class="contact-footer">
        <div class="contact-inner">
            <div class="address">
-               <h1>Physical Address</h1>
+               <h1>Address</h1>
                <h3>05 Rosewood Street</h3>
                <h3>Cape Town, Western Cape</h3>
                <h3>South Africa</h3>
@@ -126,7 +131,7 @@ export default {
     .first-few{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        width: 60%;
+        width: 75%;
     }
     .first-few label input{
         font-size: 24px;
@@ -134,27 +139,30 @@ export default {
         background-color: transparent;
         border: none;
         border-bottom: #fff 4px solid;
-        width: 382.89px;
+        width: 382px;
         outline: none;
         color: #fff;
     }
-    /* .message {
-        height: 20px !important;
-    } */
+    ::-webkit-input-placeholder {
+    color: white;
+    text-indent: 1rem;
+    font-family: "Kalnia", serif;
+    }
     label textarea{
         font-size: 24px;
         margin: 0 0 60px 0;
         background-color: transparent;
         border: none;
         border-bottom: #fff 4px solid;
-        width: 947.97px;
+        width: 947px;
         outline: none;
         color: #fff;
+        font-family: 'Kalnia';
     }
     .buttons{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        width: 60%;
+        width: 98%;
         justify-items: center;
     }
     button{
@@ -165,5 +173,23 @@ export default {
         font-size: 20px;
         font-weight: 400;
         text-align: left;
+        cursor: pointer;
     }
+    .submit{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        height: 20px;
+        gap: 15px;
+    }
+    .clear{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        height: 20px;
+        gap: 15px;
+    }
+    /* .right img{
+        
+    } */
 </style>

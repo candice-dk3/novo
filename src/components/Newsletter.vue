@@ -63,7 +63,7 @@ export default {
     }
     .newsletter button:hover{
         background-color: #0c264e;
-        transition: 0.s;
+        transition: 0.1s;
         color: #CBB26A;
         font-weight: 600;
 

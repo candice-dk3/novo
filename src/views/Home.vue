@@ -19,8 +19,7 @@
     </div>
     <div class="second-sec">
         <div class="inner-categories">
-            <div class="container">
-                <div class="categories">
+            <div class="categories">
                 <div v-for="category in categories" :key="category.id" class="category">
                 <router-link to="/products">
                     <div class="category-image" :style="{ backgroundImage: `url(${category.image})` }">
@@ -30,7 +29,6 @@
                     </div>
                 </router-link>
                 </div>
-                </div>
             </div>
         </div>
     </div>
@@ -39,7 +37,20 @@
             
         </div>
     </div>
-    <div class="third-sec"></div>
+    <div class="third-sec">
+        <h1>Why Choose Us</h1>
+        <div class="inner-third-sec">
+            <div class="info">
+                <div class="info-text">
+                    <div class="first-part"></div>
+                    <div class="second-part"></div>
+                    <a href="/about">Read more</a>
+                </div>
+                <div class="info-img">
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 </template>
 <script>
@@ -111,27 +122,30 @@ button{
 /* Second Section */
 .second-sec{
     background-image: url('https://github.com/candice-dk3/novo/blob/frontend/src/assets/category-bg.png?raw=true');
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+    object-fit: contain;
     width: 100%;
 }
 .inner-categories{
-    padding: 4rem;
+    /* padding: 50px; */
+    width: 100%;
 }
 .inner-categories h1{
     font-weight: 500;
-    font-size: 2.4rem;
-    margin-bottom: 2rem;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 .categories {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
+    justify-items: center;
+    padding: 40px;
 }
 .category {
-    margin: 1rem;
-    width: 40rem;
-    height: 20rem;
-    margin-bottom: 4rem;
+    margin: 45px;
+    width: 600px;
+    height: 320px;
+    margin-bottom: 30px;
 }
 .category-image {
   width: 100%;
@@ -140,7 +154,6 @@ button{
   background-position: center;
   position: relative;
   overflow: hidden;
-  margin-left: 7rem;
 }
 .category-text {
   position: absolute;
@@ -164,7 +177,27 @@ button{
 }
 /* Third Section */
 .third-sec{
-    height: 50rem;
+    width: 85%;
+    display: inline-block;
 }
-
+/* .inner-third-sec{
+    width: 100%;
+} */
+.third-sec h1{
+    font-size: 38px;
+    font-weight: 400;
+    text-align: left;
+    margin: 40px 0 20px 0;
+}
+.info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.info-img{
+    background: url('https://github.com/candice-dk3/novo/blob/frontend/src/assets/why-choose-us.png?raw=true');
+    background-repeat: no-repeat;
+    height: 650px;
+    width: 100%;
+    padding: 20px;
+}
 </style>

@@ -68,9 +68,9 @@ footer{
 }
 .couchLogo{
     border-radius: 50%;
-    width: 19rem;
+    width: 420px;
     border: 5px solid #CBB26A;
-    margin-top: 3.2rem;
+    margin-top: 50px;
 }
 .social-M, .about-div, .customer-S{
     padding: 3rem;
@@ -90,11 +90,11 @@ h2{
     color: white;
 }
 .logo{
-    width: 2.4rem;
-    padding: 0.2rem;
+    width: 35px;
+    padding: 2px;
 }
 h4{
-    margin-top: 1rem;
+    margin-top: 2px;
     font-weight: 400;
 }
 h3{
