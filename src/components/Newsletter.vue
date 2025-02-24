@@ -1,12 +1,12 @@
 <template>
     <section>
         <div class="newsletter">
-        <div class="text">
-            <h3>If you want more deals, subscribe to our newsletter</h3>
+            <div class="text">
+                <h3>If you want more deals, subscribe to our newsletter</h3>
+            </div>
+            <input type="email" name="email" placeholder="example@gmail.com">
+            <button type="submit">Subscribe Now</button>
         </div>
-        <input type="email" name="email" placeholder="example@gmail.com">
-        <button type="submit">Subscribe Now</button>
-    </div>
     </section>
 </template>
 <script>
@@ -22,9 +22,9 @@ export default {
         background-size:cover;
     }
     .text h3{
-        background-color: #0c264e7e ;
+        background-color: #ffffff53 ;
         width: 35%;
-        height: 40px;
+        height: 35px;
         display: inline-block;
         justify-content: center;
         margin: 40px 0 20px 0;
