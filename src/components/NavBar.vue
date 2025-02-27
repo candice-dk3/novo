@@ -12,8 +12,7 @@
     <div class="right-side">
       <div class="log-sign-sec">
         <!-- <button @click="showModal = true">Log In</button> -->
-        <router-link to="/">Log In</router-link>
-        <router-link to="/">Sign Up</router-link>
+        <button></button>
       </div>
       <div class="acc-sec">
         <router-link to="/cart"><img :src="cartLogo" alt="Cart Logo" class="Logo"></router-link>
@@ -82,11 +81,11 @@ export default {
 </script>
 <style scoped>   
 nav {
-    padding: 0.2rem;
+    /* padding: 0.2rem; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     background-color: #0C264E;
-    height: 134px;
+    /* height: 134px; */
     position: relative;
 }
 nav a {
@@ -94,7 +93,7 @@ nav a {
     text-decoration: none;
     font-weight: 350;
     font-size: 26px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 nav a.router-link-exact-active {
     color: #CBB26A;
@@ -105,12 +104,19 @@ nav a:hover{
 }
 .logo{
     height: 134px;
-    margin-right: 200px;
+    /* margin-right: 200px; */
 }
+/* .left-side{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
 .right-side{
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* margin-top: 50px; */
+    display: flex;
+    /* grid-template-columns: repeat(2, 1fr); */
+    align-items: center;
+    justify-content: center;
 }
 .log-sign-sec a, .acc-sec a {
   margin-right: 60px;
@@ -125,6 +131,7 @@ nav a:hover{
 .middle{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    align-items: center;
 }
 .Logo{
     width: 2.5rem;

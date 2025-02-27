@@ -39,7 +39,7 @@
         </div>
     </div>
     <div class="copyRight">
-        <h3>@ Novo {{ new Date().getFullYear() }} | All Rights Reserved</h3>
+        <h3>© Novo {{ new Date().getFullYear() }} | All Rights Reserved</h3>
     </div>
 </footer>
 </template>
@@ -48,7 +48,7 @@ export default {
     name:'Footer',
     data(){
         return{
-            couchLogo:'https://github.com/candice-dk3/novo/blob/frontend/src/assets/novo-couch.png?raw=true',
+            couchLogo:'https://github.com/candice-dk3/novo/blob/frontend/src/assets/novo-couch-1.png?raw=true',
             twitterLogo:'https://github.com/candice-dk3/novo/blob/frontend/src/assets/twitter.png?raw=true',
             instaLogo:'https://github.com/candice-dk3/novo/blob/frontend/src/assets/instagram.png?raw=true',
             fbLogo:'https://github.com/candice-dk3/novo/blob/frontend/src/assets/facebook.png?raw=true'
@@ -67,10 +67,8 @@ footer{
     grid-template-columns: repeat(4, 1fr); 
 }
 .couchLogo{
-    border-radius: 50%;
     width: 420px;
-    border: 5px solid #CBB26A;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .social-M, .about-div, .customer-S{
     padding: 3rem;
