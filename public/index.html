@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Page</title>
+</head>
+<body>
+    <div class="home">
+        <h2>Home</h2>
+        <table border="1px solid">
+            <thead>
+                <tr>
+                    <th>Method</th>
+                    <th>Path</th>
+                    <th>Descriptions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <td>GET</td>
+                <td>/</td>
+                <td>Home Page</td>
+            </tbody>
+        </table>
+    </div>
+    <div class="users">
+        <h2>Users Table</h2>
+        <table border="1px solid">
+            <thead>
+                <tr>
+                    <th>Method</th>
+                    <th>Path</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GET</td>
+                    <td>/users</td>
+                    <td>Get all users</td>
+                </tr>
+                <tr>
+                    <td>GET</td>
+                    <td>/users/singleuser/:id</td>
+                    <td>Gets single user by userID</td>
+                </tr>
+                <tr>
+                    <td>POST</td>
+                    <td>/users/add</td>
+                    <td>Adds a one user</td>
+                </tr>
+                <tr>
+                    <td>PATCH/PUT</td>
+                    <td>/users/update/:id</td>
+                    <td>Edits user details by userID</td>
+                </tr>
+                <tr>
+                    <td>DELETE</td>
+                    <td>/users/delete/:id</td>
+                    <td>Delete user by userID</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="product-table">
+        <h2>Items Table</h2>
+        <table border="1px solid">
+            <thead>
+                <tr>
+                    <th>Method</th>
+                    <th>Path</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GET</td>
+                    <td>/items</td>
+                    <td>Get all items</td>
+                </tr>
+                <tr>
+                    <td>GET</td>
+                    <td>/items/:id</td>
+                    <td>Gets single item by itemID</td>
+                </tr>
+                <tr>
+                    <td>POST</td>
+                    <td>/items/add</td>
+                    <td>Adds a single item</td>
+                </tr>
+                <tr>
+                    <td>PATCH/PUT</td>
+                    <td>/items/update/:id</td>
+                    <td>Edits a single item details by itemID</td>
+                </tr>
+                <tr>
+                    <td>DELETE</td>
+                    <td>/items/delete/:id</td>
+                    <td>Delete item by itemID</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Cart</h2>
+        <table border="1px solid">
+            <thead>
+                <tr>
+                    <th>Method</th>
+                    <th>Path</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GET</td>
+                    <td>/carts</td>
+                    <td>Get all users carts</td>
+                </tr>
+                <tr>
+                    <td>GET</td>
+                    <td>/:id/cart</td>
+                    <td>Gets single users cart by its ID</td>
+                </tr>
+                <tr>
+                    <td>POST</td>
+                    <td>/cart/add</td>
+                    <td>Adding an Item to the cart</td>
+                </tr>
+                <tr>
+                    <td>PATCH/PUT</td>
+                    <td>/:id/cart/:itemID</td>
+                    <td>Updating a users cart</td>
+                </tr>
+                <tr>
+                    <td>DELETE</td>
+                    <td>/:id/cart</td>
+                    <td>Delete item in the cart</td>
+                </tr>
+                <tr>
+                    <td>POST</td>
+                    <td>/:id/cart</td>
+                    <td>Add user cart</td>
+                </tr>
+                <tr>
+                    <td>DELETE</td>
+                    <td>/:id/cart/:itemID</td>
+                    <td>Delete item in the cart</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
