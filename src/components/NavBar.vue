@@ -10,10 +10,6 @@
         <router-link to="/about">About</router-link>
     </div>
     <div class="right-side">
-      <div class="log-sign-sec">
-        <!-- <button @click="showModal = true">Log In</button> -->
-        <button></button>
-      </div>
       <div class="acc-sec">
         <router-link to="/cart"><img :src="cartLogo" alt="Cart Logo" class="Logo"></router-link>
         <router-link to="/account"><img :src="accLogo" alt="Account Logo" class="Logo"></router-link>
@@ -30,28 +26,27 @@
         <router-link to="/">SIGN UP</router-link>
         <router-link to="/cart">CART</router-link>
         <router-link to="/account">ACCOUNT</router-link>
-    </div>
-
-    <!-- Log In modal -->
-    <div class="modal" v-if="showModal">
-      <div class="modal-background" @click="showModal = false"></div>
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2>Log In</h2>
-          <button class="close" @click="showModal = false">&times;</button>
-        </div>
-        <div class="modal-body">
-          <!-- Log in form goes here -->
-          <form>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username"><br><br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password"><br><br>
-            <input type="submit" value="Log In">
-          </form>
+      </div>
+      <!-- Log In modal -->
+      <div class="modal" v-if="showModal">
+        <div class="modal-background" @click="showModal = false"></div>
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Log In</h2>
+            <button class="close" @click="showModal = false">&times;</button>
+          </div>
+          <div class="modal-body">
+            <!-- Log in form goes here -->
+            <form>
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username"><br><br>
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password"><br><br>
+              <input type="submit" value="Log In">
+            </form>
+          </div>
         </div>
       </div>
-    </div>
 </nav>
 </template>
 <script>
@@ -59,7 +54,7 @@ export default {
     name:'Navbar',
     data(){
         return{
-            logo:'https://github.com/candice-dk3/novo/blob/frontend/src/assets/navbar-logo.png?raw=true',
+            logo:'https://github.com/candice-dk3/novo/blob/frontend/src/assets/Logo.png?raw=true',
             cartLogo: 'https://github.com/candice-dk3/novo/blob/frontend/src/assets/cart.png?raw=true',
             accLogo: 'https://github.com/candice-dk3/novo/blob/frontend/src/assets/account.png?raw=true',
             mobileMenuActive: false,
@@ -85,7 +80,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     background-color: #0C264E;
-    /* height: 134px; */
+    height: 134px;
     position: relative;
 }
 nav a {
@@ -102,10 +97,10 @@ nav a:hover{
   color: #CBB26A;
   transition: 0.5s;
 }
-.logo{
-    height: 134px;
-    /* margin-right: 200px; */
-}
+/* .logo{
+    height: 110px;
+    margin-right: 200px;
+} */
 /* .left-side{
   display: flex;
   align-items: center;
@@ -121,9 +116,9 @@ nav a:hover{
 .log-sign-sec a, .acc-sec a {
   margin-right: 60px;
 }
-.acc-sec {
+/* .acc-sec {
  text-align: right;
-}
+} */
 .log-sign-sec {
   text-align: right;
   margin-right: -130px;
@@ -134,8 +129,7 @@ nav a:hover{
     align-items: center;
 }
 .Logo{
-    width: 2.5rem;
-    margin-top: -0.5rem;
+    width: 50px;
 }
 .hamburger {
     display: none;

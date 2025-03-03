@@ -38,7 +38,6 @@
         </div>
     </form>
    </div>
-   <!-- <div class="comming-soon-items"></div> -->
    <div class="contact-footer">
        <div class="contact-inner">
            <div class="address">
@@ -143,11 +142,11 @@ export default {
         outline: none;
         color: #fff;
     }
-    ::-webkit-input-placeholder {
+    /* ::-webkit-input-placeholder {
     color: white;
     text-indent: 1rem;
     font-family: "Kalnia", serif;
-    }
+    } */
     label textarea{
         font-size: 24px;
         margin: 0 0 60px 0;

@@ -16,18 +16,21 @@ export default {
 </script>
 <style>
     .newsletter{
-        height: 280px;
+        height: 230px;
         color: black;
         background-image: url('https://github.com/candice-dk3/novo/blob/frontend/src/assets/newsletter.png?raw=true');
         background-size:cover;
+        /* display: flex; */
+        justify-items: center;
     }
     .text h3{
         background-color: #ffffff53 ;
-        width: 35%;
-        height: 35px;
+        width: 550px;
+        height: 28px;
         display: inline-block;
         justify-content: center;
-        margin: 40px 0 20px 0;
+        justify-items: center;
+        margin: 40px 0 40px 0;
     }
       .newsletter input{
         background-color: #CBB26A;
