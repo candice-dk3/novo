@@ -58,7 +58,7 @@ export default {
   data() {
     return {
       continueS: 'https://github.com/candice-dk3/novo/blob/frontend/src/assets/icons8-go-back-48.png?raw=true',
-      // addToCart: 'https://github.com/candice-dk3/artisanAura-images/blob/main/purchase.png?raw=true',
+      addToCart: 'https://github.com/candice-dk3/artisanAura-images/blob/main/purchase.png?raw=true',
       activeTab: 'description'
     };
   },
