@@ -18,6 +18,6 @@ export default {
         width: 278px;
         height: 332px;
         background-color: #0c264e7e;
-        padding: 20px;
+        padding: 10px;
     }
 </style>

@@ -82,6 +82,7 @@ nav {
     background-color: #0C264E;
     height: 134px;
     position: relative;
+    z-index: 2;
 }
 nav a {
     color: white;
@@ -152,6 +153,7 @@ nav a:hover{
     background-color: #0C264E;
     padding: 1rem;
     width: 100%;
+    z-index: 2;
 }
 .mobile-menu a {
     display: block;
