@@ -1,9 +1,9 @@
 <template>
   <section class="item">
     <div class="container-fluid">
-      <button @click="$router.push('/products')" class="continue-shopping">
+      <a href="/products">
         <img :src="continueS" alt="Go Back" class="shopping">
-      </button>
+      </a>
       <div v-if="product" class="product">
         <div class="item-card">
           <div class="item-image">
@@ -57,7 +57,7 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      continueS: 'https://github.com/candice-dk3/artisanAura-images/blob/main/go-back.png?raw=true',
+      continueS: 'https://github.com/candice-dk3/novo/blob/frontend/src/assets/icons8-go-back-48.png?raw=true',
       addToCart: 'https://github.com/candice-dk3/artisanAura-images/blob/main/purchase.png?raw=true',
       activeTab: 'description'
     };
