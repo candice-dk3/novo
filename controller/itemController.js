@@ -26,9 +26,9 @@ const getProd = async (req, res) => {
 
 const addProd = async (req, res) => {
     try {
-      const { prodName, prodDesc, prodPrice, prodQuantity, Description, prodType, prodCategory, prodImg, Type, prodMaterial, Colour, prodCode, prodAssem } = req.body;
+      const { prodName, prodDesc, prodPrice, prodQuantity, Description, prodType, prodCategory, prodImg, prodImg2, prodImg3, prodImg4, prodImg5, Type, prodMaterial, Colour, prodCode, prodAssem } = req.body;
 
-      const newProd = await addProdDb(prodName, prodDesc, prodPrice, prodQuantity, Description, prodType, prodCategory, prodImg, Type, prodMaterial, Colour, prodCode, prodAssem);
+      const newProd = await addProdDb(prodName, prodDesc, prodPrice, prodQuantity, Description, prodType, prodCategory, prodImg, prodImg2, prodImg3, prodImg4, prodImg5, Type, prodMaterial, Colour, prodCode, prodAssem);
       res.json(newProd);
     } catch (error) {
       console.error(error);
@@ -50,12 +50,12 @@ const deleteProd = async (req, res) => {
 const updateProd = async (req, res) => {
 try {
     const { id } = req.params;
-    const { prodName, prodDesc, prodPrice, prodQuantity, Description, prodType, prodCategory, prodImg, Type, prodMaterial, Colour, prodCode, prodAssem, } = req.body;
+    const { prodName, prodDesc, prodPrice, prodQuantity, Description, prodType, prodCategory, prodImg, prodImg2, prodImg3, prodImg4, prodImg5, Type, prodMaterial, Colour, prodCode, prodAssem, } = req.body;
     const item = await getProdDb(id);
     if (!item) {
     res.status(404).json({ message: 'Product not found' });
     } else {
-    await updateProdDb(prodName, prodDesc, prodPrice, prodQuantity, Description, prodType, prodCategory, prodImg, Type, prodMaterial, Colour, prodCode, prodAssem, id);
+    await updateProdDb(prodName, prodDesc, prodPrice, prodQuantity, Description, prodType, prodCategory, prodImg, prodImg2, prodImg3, prodImg4, prodImg5, Type, prodMaterial, Colour, prodCode, prodAssem, id);
     res.json({ message: 'Product updated successfully' });
     }
 } catch (error) {
