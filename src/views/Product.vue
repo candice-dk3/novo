@@ -181,4 +181,8 @@ export default {
   justify-content: space-around;
   margin: 70px 0 0 0;
 }
+.shopping{
+  width: 42px;
+  align-content:end;
+}
 </style>
