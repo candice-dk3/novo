@@ -94,11 +94,12 @@ export default {
   left: 20%; 
   transform: translate(-50%, -50%);
   text-align: center;
-  color: black; 
-  font-size: 5rem;
+  color: #fff; 
+  /* font-size: 5rem; */
   font-weight: 200;
   margin: 0; 
-  text-align: left
+  text-align: left;
+  backdrop-filter: blur(5px);
 }
 .text h1{
     font-size: 5rem;
@@ -117,6 +118,7 @@ button{
     background-color: #0C264E;
     height: 60px;
     width: 226px;
+    text-align: left;
 }
 
 /* Second Section */
